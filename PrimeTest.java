@@ -24,6 +24,7 @@ public class PrimeTest {
 
 	@Test
 	public void testBasic() {
+		System.out.println("testBasic testing");
 		assertFalse("0  is not prime", Prime.isPrime(0));
 		assertFalse("1  is not prime", Prime.isPrime(1));
 		assertTrue ("2  is prime",     Prime.isPrime(2));
@@ -34,6 +35,7 @@ public class PrimeTest {
 	
 	@Test
 	public void testPrime() {
+		System.out.println("testPrime testing");
 		assertTrue("3 is prime", Prime.isPrime(3));
 		assertTrue("5 is prime", Prime.isPrime(5));
 		assertTrue("7 is prime", Prime.isPrime(7));
@@ -43,6 +45,7 @@ public class PrimeTest {
 	
 	@Test
 	public void testNotPrime() {
+		System.out.println("testNoPrime testing");
 		assertFalse("4 is not prime", Prime.isPrime(4));
 		assertFalse("6 is not prime", Prime.isPrime(6));
 		assertFalse("8 is not prime", Prime.isPrime(8));
