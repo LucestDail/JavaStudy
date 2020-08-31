@@ -11,7 +11,6 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-
 public class WikiFetcher {
 	private long lastRequestTime = -1;
 	private long minInterval = 1000;
@@ -32,7 +31,7 @@ public class WikiFetcher {
 
 		// select the content text and pull out the paragraphs.
 		Element content = doc.getElementById("mw-content-text");
-
+		
 		// TODO: avoid selecting paragraphs from sidebars and boxouts
 		Elements paras = content.select("p");
 		return paras;
@@ -45,23 +44,14 @@ public class WikiFetcher {
 	 * @return
 	 * @throws IOException
 	 */
+	
 	public Elements readWikipedia(String url) throws IOException {
-		URL realURL = new URL(url);
-
-		// assemble the file name
-		String slash = File.separator;
-		String filename = "resources" + slash + realURL.getHost() + realURL.getPath();
-
-		// read the file
-		InputStream stream = WikiFetcher.class.getClassLoader().getResourceAsStream(filename);
-		Document doc = Jsoup.parse(stream, "UTF-8", filename);
-
-		// parse the contents of the file
+		InputStream inStream = new URL(url).openStream();
+		Document doc = Jsoup.parse(inStream, "UTF-8", url);
 		Element content = doc.getElementById("mw-content-text");
 		Elements paras = content.select("p");
 		return paras;
 	}
-
 	/**
 	 * Rate limits by waiting at least the minimum interval between requests.
 	 */
