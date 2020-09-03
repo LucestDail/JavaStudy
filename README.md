@@ -8,11 +8,11 @@ This repository is my code storage repository for study java and algorithm which
 
 ## Source
 
-Most of all comes from [java Data structure algorithm](https://github.com/AllenDowney/ThinkDataStructures) and algorithm testing code from [Codewars](https://www.codewars.com/dashboard)
+Most of all comes from [AllenDowney's ThinkDataStructures](https://github.com/AllenDowney/ThinkDataStructures) and algorithm testing code from [Codewars](https://www.codewars.com/dashboard)
 
 ## How to run this source code
 
-It works with java and have to add Junit jar library for running this stuff. If you want to study, visit [my blog](http://dailusia.blog.fc2.com/blog-category-11.html)and follow my comment!
+It works with java and have to add Junit jar library for running this stuff. If you want to study wtih me, visit [my blog](http://dailusia.blog.fc2.com/blog-category-11.html) and follow my comment!
 
 
 ## About this repository
@@ -20,7 +20,7 @@ It works with java and have to add Junit jar library for running this stuff. If 
 
 Key features include:
 
-- Java basic module algorithm
+- Basic algorithm using Java in-built module and interface
 - Codewars solutions
 
 
