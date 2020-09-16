@@ -1,5 +1,10 @@
-class Solution {
-    public int solution(int[][] board, int[] moves) {
+class Kakao2019Solution {
+    public static int solved() {
+        
+        int[][] board = {{0,0,0,0,0},{0,0,1,0,3},{0,2,5,0,1},{4,2,4,4,2},{3,5,1,3,1}};
+        int [] moves = {1,5,3,5,1,2,1,4};
+        //basic set, don't copy
+        //Selecting and pushing stack algorithm
         int[] stack = new int[moves.length+1];
         int count = 1;
         int boom = 0;
@@ -8,14 +13,14 @@ class Solution {
         	for(int deepth = 0; deepth < board.length;deepth++) {
         		if(board[deepth][select-1] == 0) {
         			continue;
-        		}else { // 0 ì´ ì•„ë‹Œ ê°’ ë§Œë‚  ê²½ìš°
-        			if( stack[count-1] == board[deepth][select-1]) {//ì´ì „ ìŠ¤íƒê°’ê³¼ ë™ì¼í•  ê²½ìš°
+        		}else { // 0 ÀÌ ¾Æ´Ñ °ª ¸¸³¯ °æ¿ì
+        			if( stack[count-1] == board[deepth][select-1]) {//ÀÌÀü ½ºÅÃ°ª°ú µ¿ÀÏÇÒ °æ¿ì
         				stack[count-1] = board[deepth][select-1] = 0;
         				count--;
         				boom += 2;
         				System.out.println("boom!");
         				break;
-        			}else { // ì´ì „ ìŠ¤íƒê°’ì´ëž‘ ë‹¤ë¥¼ ê²½ìš°
+        			}else { // ÀÌÀü ½ºÅÃ°ªÀÌ¶û ´Ù¸¦ °æ¿ì
         				stack[count] = board[deepth][select-1];
             			board[deepth][select-1] = 0;
             			System.out.println("taking : " + stack[count]);
