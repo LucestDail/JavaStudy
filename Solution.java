@@ -1,17 +1,16 @@
-public class Solution {
-    public static boolean validatePin(String pin) {
-    	char temp;
-    	boolean pinCompare = true;
-    	if(pin.length() == 4 || pin.length() == 6) {
-    		for(int i = 0; i<pin.length();i++) {
-    			temp = pin.charAt(i);
-    			if(Character.isDigit(temp) == false) {
-    				pinCompare = false;
+class Solution{
+    public static int solve(int [] arr){
+    	System.out.println("testing");
+    	int answer = 0;
+    	for(int i = 0; i < arr.length; i++) {
+    		for(int j = 0; j < arr.length; j++) {
+    			if(i == j) {
+    				continue;
+    			}else {
+    				
     			}
     		}
-    	}else{
-    		pinCompare = false;
     	}
-        return pinCompare;
+    	return answer;
     }
 }
