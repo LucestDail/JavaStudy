@@ -2,33 +2,13 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import org.junit.runners.JUnit4;
 
-public class SolutionTest {
+public class SolutionTest{    
     @Test
-    public void validPins() {
-        assertEquals(true, Solution.validatePin("1234"));
-        assertEquals(true, Solution.validatePin("0000"));
-        assertEquals(true, Solution.validatePin("1111"));
-        assertEquals(true, Solution.validatePin("123456"));
-        assertEquals(true, Solution.validatePin("098765"));
-        assertEquals(true, Solution.validatePin("000000"));
-        assertEquals(true, Solution.validatePin("090909"));
-    }
-    
-    @Test
-    public void nonDigitCharacters() {
-        assertEquals(false, Solution.validatePin("a234"));
-        assertEquals(false, Solution.validatePin(".234"));
-    }
-    
-    @Test
-    public void invalidLengths() {
-        assertEquals(false, Solution.validatePin("1"));
-        assertEquals(false, Solution.validatePin("12"));
-        assertEquals(false, Solution.validatePin("123"));
-        assertEquals(false, Solution.validatePin("12345"));
-        assertEquals(false, Solution.validatePin("1234567"));
-        assertEquals(false, Solution.validatePin("-1234"));
-        assertEquals(false, Solution.validatePin("1.234"));
-        assertEquals(false, Solution.validatePin("00000000"));
+    public void basicTests(){     
+        assertEquals(3,Solution.solve(new int [] {1,-1,2,-2,3}));
+        assertEquals(-4,Solution.solve(new int [] {-3,1,2,3,-1,-4,-2}));
+        assertEquals(3,Solution.solve(new int [] {1,-1,2,-2,3,3}));
+        assertEquals(-38,Solution.solve(new int [] {-110,110,-38,-38,-62,62,-38,-38,-38}));
+        assertEquals(-9,Solution.solve(new int [] {-9,-105,-9,-9,-9,-9,105}));
     }
 }
