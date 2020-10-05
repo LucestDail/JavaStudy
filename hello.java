@@ -1,4 +1,4 @@
-public class GrassHopper {
+public class hello {
 
     public static String sayHello(String name) {
       StringBuilder sb = new StringBuilder("");
